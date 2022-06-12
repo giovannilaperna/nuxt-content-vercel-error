@@ -11,7 +11,7 @@
       "config": {
         "internalServer": true,
         "generateStaticRoutes": true,
-        "serverFiles": ["rest/**", ".nuxt/content/**", "content/**"]
+        "serverFiles": ["rest/**", "content/**"]
       }
     }
   ],
