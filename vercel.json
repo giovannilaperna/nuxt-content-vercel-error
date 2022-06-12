@@ -17,8 +17,8 @@
   ],
   "rewrites": [
     {
-      "source": "/rest/test",
-      "destination": "/rest//test.js"
+      "source": "/rest/index",
+      "destination": "/rest/index.js"
     }
   ]
 }
