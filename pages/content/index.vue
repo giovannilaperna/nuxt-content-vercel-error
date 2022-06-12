@@ -10,7 +10,7 @@
 export default {
   name: 'BlogList',
   async asyncData({ $content, app, error }) {
-    const posts = await $content('blog')
+    const posts = await $content('content')
       .only(['title', 'path'])
       .sortBy('createdAt', 'asc')
       .fetch()

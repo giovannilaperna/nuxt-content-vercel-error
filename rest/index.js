@@ -1,7 +1,7 @@
 import express from 'express'
 const app = express()
 
-app.get('/rest/test', (req, res) => {
+app.get('/rest/index', (req, res) => {
     
   res.status(200).json({ foo: 'bar' }).end()
 })

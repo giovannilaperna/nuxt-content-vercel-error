@@ -5,25 +5,19 @@ export default {
 
   modules: [
 
-    ['@nuxt/content'],
-
     ['@nuxtjs/axios', {
       debug: (process.env.URL) ? false : true,
       baseURL:  (process.env.URL) ? `https://${process.env.URL}` : 'http://localhost:3000',
       proxyHeaders: true
     }],
+
+    '@nuxt/content',
   ],
 
 
   serverrestMiddleware: process.env.URL ? [] : [
-    '~/rest/test.js',
+    '~/rest/index.js',
   ],
-
-  generate: {
-    async routes () {
-      return models
-    }
-  },
 
   build: {
     quiet: false

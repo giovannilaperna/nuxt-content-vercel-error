@@ -1,7 +1,7 @@
 <template>
   <div>
-    <nuxt-link :to="{name: 'api'}">Rest</nuxt-link>
+    <nuxt-link :to="{name: 'axios'}">Axios</nuxt-link>
     <br>
-    <nuxt-link :to="{name: 'blog'}">Blog</nuxt-link>
+    <nuxt-link :to="{name: 'content'}">Content</nuxt-link>
   </div>
 </template>
