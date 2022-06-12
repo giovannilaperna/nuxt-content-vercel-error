@@ -12,7 +12,7 @@ export default {
   }),
   methods: {
     async getFoo() {
-      const { data: { foo }} = await this.$axios.get('http://localhost:3000/rest/index')
+      const { data: { foo }} = await this.$axios.get('/rest/index')
       this.foo = foo
     }
   }
