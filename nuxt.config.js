@@ -1,11 +1,5 @@
 export default async () => {
 
-    const getRoutes = async () => {
-      const { $content } = require('@nuxt/content')
-      const dynamicRoutes = await $content('content').only(['slug']).fetch()
-      return dynamicRoutes.map(myroute => myroute.slug === '/index' ? '/' : '/content/' + myroute.slug)
-    }
-
   return {
 
     target: "static",
@@ -31,6 +25,14 @@ export default async () => {
       quiet: false
     },
 
-    generate: await getRoutes()
+    generate: async () => {
+      const { $content } = require('@nuxt/content')
+    
+      const posts = await $content('content')
+        .only(['path'])
+        .fetch()
+    
+      return posts.map(post => post.path === '/index' ? '/' : '/content/' + post.path)
+    }
   }
 }
