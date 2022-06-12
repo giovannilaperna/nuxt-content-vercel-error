@@ -7,7 +7,7 @@ export default {
 
     ['@nuxtjs/axios', {
       debug: (process.env.URL) ? false : true,
-      baseURL:  (process.env.URL) ? `https://${process.env.URL}` : 'http://localhost:3000',
+      baseURL:  (process.env.URL) ? `${process.env.URL}` : 'http://localhost:3000',
       proxyHeaders: true
     }],
 
